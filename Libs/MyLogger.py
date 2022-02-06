@@ -5,7 +5,7 @@ class MyLogger:
     @staticmethod
     def getLogger(name, level=logging.DEBUG):
         logger = logging.getLogger(name)
-        formatter = logging.Formatter('[%(asctime)s][%(levelname)s|%(filename)s:%(lineno)s] >> %(message)s')
+        formatter = logging.Formatter('[%(asctime)s][%(levelname)s|%(filename)s:%(funcName)s:%(lineno)s] >> %(message)s')
         streamHandler = logging.StreamHandler()
         streamHandler.setFormatter(formatter)
         logger.addHandler(streamHandler)

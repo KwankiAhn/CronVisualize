@@ -15,8 +15,8 @@ if __name__ == "__main__":
     argParser.printArgs()
 
     writer = ImageWriter()
-    
-    cronParser = Parser(argParser.cronInput)
-    cronParser.parseDailySchedule(writer)
-    cronParser.parseWeeklySchedule(writer)
-    cronParser.parseMonthlySchedule(writer)
+
+    cronParser = Parser(argParser.cronInput, writer)
+    cronParser.parseDailySchedule()
+    cronParser.parseWeeklySchedule()
+    cronParser.parseMonthlySchedule()
