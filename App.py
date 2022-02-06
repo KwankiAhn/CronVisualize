@@ -8,7 +8,7 @@ logger = MyLogger.getLogger(__name__)
 
 
 if __name__ == "__main__":   
-    logger.info("d/app start...")
+    logger.info("App Start...")
 
     argParser = ArgParserBase()
     argParser.parseArgs()
